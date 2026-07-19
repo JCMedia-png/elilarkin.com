@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eli Larkin | An Absolute Phenomenon</title>
+<meta name="description" content="The official (unofficial) home of Eli Larkin, an absolute phenomenon.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --volt: #c6ff00;
+    --tang: #ff6d00;
+    --teal: #00e5c7;
+    --grape: #7c4dff;
+    --ink: #101828;
+  }
+
+  body {
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive;
+    background: #eef6ff url("map.svg") repeat;
+    background-size: 900px 900px;
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  .ticker {
+    background: var(--ink);
+    color: var(--volt);
+    padding: 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .ticker span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 25s linear infinite;
+  }
+  @keyframes scroll { to { transform: translateX(-100%); } }
+
+  header {
+    text-align: center;
+    padding: 70px 20px 50px;
+    background: linear-gradient(135deg, var(--tang), var(--grape));
+    color: white;
+    position: relative;
+  }
+  header h1 {
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    text-shadow: 5px 5px 0 var(--ink);
+    transform: rotate(-2deg);
+    animation: wobble 3s ease-in-out infinite;
+  }
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-2deg) scale(1); }
+    50% { transform: rotate(2deg) scale(1.03); }
+  }
+  header p.tagline {
+    font-size: 1.4rem;
+    margin-top: 18px;
+    text-shadow: 2px 2px 0 var(--ink);
+  }
+
+  .badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 110px;
+    height: 110px;
+    background: var(--volt);
+    color: var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 12px;
+    border: 4px dashed var(--ink);
+    animation: spin 10s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  section { max-width: 960px; margin: 0 auto; padding: 60px 20px; }
+
+  h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 35px;
+    transform: rotate(-1deg);
+    text-shadow: 3px 3px 0 var(--volt);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .polaroid {
+    background: white;
+    padding: 12px 12px 50px;
+    box-shadow: 6px 6px 0 rgba(16, 24, 40, .25);
+    transform: rotate(-2deg);
+    transition: transform .2s;
+    position: relative;
+  }
+  .polaroid:nth-child(2n) { transform: rotate(2.5deg); }
+  .polaroid:nth-child(3n) { transform: rotate(-1deg); }
+  .polaroid:hover { transform: rotate(0) scale(1.06); z-index: 2; }
+  .polaroid .photo {
+    aspect-ratio: 1;
+    background: repeating-linear-gradient(-45deg, #dcebf7 0 14px, #eef6fd 14px 28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #93b3cc;
+  }
+  .polaroid .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .polaroid figcaption {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  footer {
+    background: var(--ink);
+    color: #a8c2e8;
+    text-align: center;
+    padding: 34px 20px;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker"><span>&#9889; BREAKING: Eli Larkin does it again &#9889; Witnesses describe him as "him" &#9889; Officials have no comment but seemed impressed &#9889; Experts agree: that's Eli &#9889;</span></div>
+
+<header>
+  <div class="badge">CERTIFIED PHENOMENON</div>
+  <h1>ELI LARKIN</h1>
+  <p class="tagline">An Absolute Phenomenon. Ask Anyone.</p>
+</header>
+
+<section>
+  <h2>&#128248; The Evidence</h2>
+  <div class="gallery">
+    <figure class="polaroid"><div class="photo">&#128444;&#65039;</div><figcaption>Photo evidence pending</figcaption></figure>
+    <figure class="polaroid"><div class="photo">&#128444;&#65039;</div><figcaption>Under review by historians</figcaption></figure>
+    <figure class="polaroid"><div class="photo">&#128444;&#65039;</div><figcaption>Too powerful to publish (yet)</figcaption></figure>
+  </div>
+</section>
+
+<footer>
+  <p>elilarkin.com is a 100% factual publication and legally distinct from journalism.</p>
+</footer>
+
+</body>
+</html>
