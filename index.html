@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eli Larkin | An Absolute Phenomenon</title>
 <meta name="description" content="The official (unofficial) home of Eli Larkin, an absolute phenomenon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -18,8 +20,8 @@
 
   body {
     font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive;
-    background: #eef6ff url("map.svg") repeat;
-    background-size: 900px 900px;
+    background: #0e1234 url("arcade.svg") repeat;
+    background-size: 600px 600px;
     color: var(--ink);
     overflow-x: hidden;
   }
@@ -42,56 +44,68 @@
 
   header {
     text-align: center;
-    padding: 70px 20px 50px;
-    background: linear-gradient(135deg, var(--tang), var(--grape));
+    padding: 26px 20px 60px;
+    background: #05070f;
     color: white;
     position: relative;
+    border-bottom: 5px solid var(--volt);
+    font-family: "Press Start 2P", monospace;
+    overflow: hidden;
   }
+  header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, transparent 1px 4px);
+    pointer-events: none;
+  }
+  .hud {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto 46px;
+    font-size: clamp(9px, 1.6vw, 13px);
+    color: var(--volt);
+    letter-spacing: 1px;
+  }
+  .hud .score { color: #ff2e88; }
   header h1 {
-    font-size: clamp(3rem, 10vw, 6.5rem);
-    text-shadow: 5px 5px 0 var(--ink);
-    transform: rotate(-2deg);
-    animation: wobble 3s ease-in-out infinite;
-  }
-  @keyframes wobble {
-    0%, 100% { transform: rotate(-2deg) scale(1); }
-    50% { transform: rotate(2deg) scale(1.03); }
+    font-size: clamp(1.6rem, 6.5vw, 4.2rem);
+    line-height: 1.2;
+    color: white;
+    text-shadow: 4px 4px 0 #ff2e88, 8px 8px 0 var(--grape);
   }
   header p.tagline {
-    font-size: 1.4rem;
-    margin-top: 18px;
-    text-shadow: 2px 2px 0 var(--ink);
+    font-size: clamp(10px, 2vw, 16px);
+    margin-top: 26px;
+    color: var(--teal);
+    line-height: 1.8;
   }
-
-  .badge {
+  .pressstart {
+    display: inline-block;
+    margin-top: 34px;
+    font-size: clamp(10px, 2vw, 15px);
+    color: var(--volt);
+    animation: blink 1.2s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  .lives {
     position: absolute;
-    top: 18px;
-    right: 18px;
-    width: 110px;
-    height: 110px;
-    background: var(--volt);
-    color: var(--ink);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
-    font-size: 13px;
-    padding: 12px;
-    border: 4px dashed var(--ink);
-    animation: spin 10s linear infinite;
+    top: 60px;
+    right: 20px;
+    display: none;
   }
-  @keyframes spin { to { transform: rotate(360deg); } }
 
   section { max-width: 960px; margin: 0 auto; padding: 60px 20px; }
 
   h2 {
-    font-size: 2.4rem;
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(1.1rem, 3.5vw, 1.9rem);
     text-align: center;
-    margin-bottom: 35px;
-    transform: rotate(-1deg);
-    text-shadow: 3px 3px 0 var(--volt);
+    margin-bottom: 40px;
+    color: white;
+    text-shadow: 3px 3px 0 var(--grape), 6px 6px 0 rgba(0,0,0,.5);
+    line-height: 1.5;
   }
 
   .gallery {
@@ -157,9 +171,10 @@
 <div class="ticker"><span>&#9889; BREAKING: Eli Larkin does it again &#9889; Witnesses describe him as "him" &#9889; Officials have no comment but seemed impressed &#9889; Experts agree: that's Eli &#9889;</span></div>
 
 <header>
-  <div class="badge">CERTIFIED PHENOMENON</div>
+  <div class="hud"><span>1UP &#10084;&#10084;&#10084;</span><span class="score">HI-SCORE 999999</span></div>
   <h1>ELI LARKIN</h1>
-  <p class="tagline">An Absolute Phenomenon. Ask Anyone.</p>
+  <p class="tagline">PLAYER 1 HAS ENTERED THE CHAT<br>AN ABSOLUTE PHENOMENON. ASK ANYONE.</p>
+  <span class="pressstart">&#9658; PRESS START</span>
 </header>
 
 <section>
