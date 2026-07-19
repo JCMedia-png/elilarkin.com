@@ -129,6 +129,19 @@
     font-size: 15px;
   }
 
+  .facts { list-style: none; display: grid; gap: 18px; }
+  .facts li {
+    background: white;
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    padding: 18px 22px;
+    font-size: 1.15rem;
+    box-shadow: 5px 5px 0 var(--tang);
+    transform: rotate(-.5deg);
+  }
+  .facts li:nth-child(2n) { box-shadow: 5px 5px 0 var(--teal); transform: rotate(.5deg); }
+  .facts li:nth-child(3n) { box-shadow: 5px 5px 0 var(--grape); }
+
   footer {
     background: var(--ink);
     color: #a8c2e8;
@@ -165,6 +178,20 @@
     <figure class="polaroid"><div class="photo"><img src="photos/eli14.jpg" alt="Eli Larkin grinning from the passenger seat in a Nike cap"></div><figcaption>Passenger seat princess</figcaption></figure>
     <figure class="polaroid"><div class="photo"><img src="photos/eli15.jpg" alt="Eli Larkin flashing a peace sign on a sunlit trail"></div><figcaption>Peace was always an option</figcaption></figure>
   </div>
+</section>
+
+<section>
+  <h2>&#129504; Verified Eli Facts</h2>
+  <ul class="facts">
+    <li>He is a gamer.</li>
+    <li>He cannot be trusted with a Nerf sword.</li>
+    <li>He is 6 ft 9 in.</li>
+    <li>He teaches people to talk.</li>
+    <li>Everybody loves underbites, and Eli has one of the best in the game.</li>
+    <li>His best pal is a goofy vegan.</li>
+    <li>He is in love with Camille. We don't know what she sees in him.</li>
+    <li>Long, tan, and handsome. Minus the tan part.</li>
+  </ul>
 </section>
 
 <footer>
